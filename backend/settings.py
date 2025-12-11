@@ -96,6 +96,9 @@ DATABASES = {
         "PASSWORD": config("DB_PASSWORD", default="root"),
         "HOST": config("DB_HOST", default="localhost"),
         "PORT": config("DB_PORT", default="3306"),
+        'OPTIONS': {
+            'ssl': {'disabled': True},
+        }
     }
 }
 
