@@ -1,0 +1,7 @@
+venv
+*.pyc
+staticfiles
+static
+media/
+media/*
+!media/.gitkeep
