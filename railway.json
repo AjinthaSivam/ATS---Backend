@@ -1,6 +1,6 @@
 {
   "build": {
-    "packages": ["python3", "pip"]
+    "builder": "paketobuildpacks/builder:base"
   },
-  "start": "gunicorn backend.wsgi:application --chdir project/src/backend"
+  "start": "gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT"
 }
