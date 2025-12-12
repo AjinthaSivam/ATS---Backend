@@ -1,0 +1,6 @@
+{
+  "build": {
+    "packages": ["python3", "pip"]
+  },
+  "start": "gunicorn backend.wsgi:application --chdir project/src/backend"
+}
