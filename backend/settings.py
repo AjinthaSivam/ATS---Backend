@@ -97,7 +97,9 @@ DATABASES = {
         "HOST": config("DB_HOST"),
         "PORT": config("DB_PORT"),
         'OPTIONS': {
-            'ssl': {'disabled': True},
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'ssl_mode': 'DISABLED',                    # ← Important for Render
+            'auth_plugin': 'mysql_native_password',    # ← This kills the "https" plugin error
         }
     }
 }
